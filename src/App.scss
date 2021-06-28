@@ -20,7 +20,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -50,7 +50,11 @@ table {
 
 body {
 
-
+	font-family: 'Raleway',sans-serif;
+	font-family: 'Raleway',sans-serif;
+	letter-spacing: 0px;
+	color: #000000;
+	opacity: 1;
 	background-color: #f6f9fc;
 
 	.contenedor {
@@ -70,10 +74,7 @@ header {
 
 header h1 {
 	
-	font-family: 'Raleway',sans-serif;
-	letter-spacing: 0px;
-	color: #000000;
-	opacity: 1;
+
 	font-size:35px;
 	padding-bottom: 50px;
 	padding-top: 20px;
@@ -115,6 +116,12 @@ section{
 	height:60vh;
 	border: solid 1px red;
 	text-align: center;
+
+	.canvas{
+	
+		border: solid 1px red;
+	
+	}
 	
 }
 

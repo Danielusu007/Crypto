@@ -1,72 +1,43 @@
 import './App.scss';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Chart1 from './Chart1';
-import Chart2 from './Chart2';
-
+import React, { useState } from 'react';
+import Header from './components/Header';
+import Nav from './components/Nav';
+import Section from './components/Section';
+import Footer from './components/Footer';
 
 
 
 function App() {
 
+  //para la comunicacion entre componentes, he creado la funcion de abajo que se le envia al nav para recoger la filtracion de la api
+  const [coin, setCoin] = useState({})
+
+  const getcurrentcoin = (currentCoin) => {
+    setCoin(currentCoin);
+  }
+
+  //////////////////////////////////////
+  //lo mismo que el anterior pero en dias 
+  const [dias, setDias] = useState({})
+
+  const getcurrentday = (currentday) => {
+    setDias(currentday);
+  }
+  ///////////////////////////////////
 
 
   return (
     <>
-
-      <header>
-        <h1>Crypto Cry</h1>
-      </header>
-
+      <Header></Header>
       <div className="contenedor">
 
-        <nav>
-
-          <div>
-            <p>bnb</p>
-          </div>
-
-          <div>
-            <span className="material-icons">&#xe8b6;</span>
-            <input></input>
-
-          </div>
-
-
-        </nav>
-
-        <section>
-
-
-
-
-          <Chart2 ></Chart2>
-
-
-
-        </section>
-
-        <footer>
-
-          <div>
-
-            <div className="contFechas">
-              <input></input>
-              <input></input>
-            </div>
-
-            <div className="contInversion">
-              <input></input>
-            </div>
-
-          </div>
-
-          <div className="contBeneficios" >
-            <p >beneficios</p>
-          </div>
-
-
-        </footer>
+        {/* le mandamos la funcion al nav para que pille el valor de la seleccion del token y la traiga de vuelta al app */}
+        <Nav oncurrentcoin={getcurrentcoin} oncurrentday={getcurrentday}  ></Nav>
+        {/* declaramos que "moneda" es igual a "coin" que es el valor guardado de la seleccion que llega del nav, y lo mandamos como props */}
+        <div key={coin.id}>
+          <Section moneda={coin} key={dias.d} dia={dias} > </Section>
+        </div>
+        <Footer ></Footer>
       </div>
     </>
   );
