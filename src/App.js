@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Section from './components/Section';
-import Footer from './components/Footer';
+//import Footer from './components/Footer';
 
 
 
@@ -26,6 +26,8 @@ function App() {
   ///////////////////////////////////
 
 
+
+
   return (
     <>
       <Header></Header>
@@ -37,7 +39,7 @@ function App() {
         <div key={coin.id}>
           <Section moneda={coin} key={dias.d} dia={dias} > </Section>
         </div>
-        <Footer ></Footer>
+        {/* <Footer></Footer> */}
       </div>
     </>
   );

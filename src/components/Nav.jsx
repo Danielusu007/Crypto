@@ -14,7 +14,6 @@ const Nav = (props) => {
             const response = await fetch(url);
             const responseJSON = await response.json();
             setCoins(responseJSON)
-
         }
         fetchApi();
     }, [])
@@ -77,7 +76,6 @@ const Nav = (props) => {
         if (coins.find(elemento => elemento.id === pvalor)) {
             valor = coins.find(elemento => elemento.id === pvalor)
             setCurrentCoin(valor.id + " - " + valor.current_price + "-USD");
-            // console.log(valor)
             props.oncurrentcoin(valor)//mirar
 
 
@@ -99,7 +97,7 @@ const Nav = (props) => {
                         }
                     </select>
 
-                    <select onChange={pdias => tiempo(pdias.target.value)}  >
+                    <select className="selectorCripto" onChange={pdias => tiempo(pdias.target.value)}  >
                         <option value="">Selecciona día</option>
                         <option value="1-día" key={1} >1-día</option>
                         <option value="7-días" key={2} >7-días</option>

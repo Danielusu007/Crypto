@@ -1,11 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 const Footer = () => {
-
-
-
-
 
 
     return (
@@ -15,8 +11,8 @@ const Footer = () => {
                 <div>
 
                     <div className="contFechas">
-                        <input></input>
-                        <input></input>
+
+
                     </div>
 
                     <div className="contInversion">

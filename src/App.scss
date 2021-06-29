@@ -68,14 +68,13 @@ body {
 header {
 
 	background-color: white;
-	
-
 }
+
 
 header h1 {
 	
 
-	font-size:35px;
+	font-size:45px;
 	padding-bottom: 50px;
 	padding-top: 20px;
 	padding-left: 20px;
@@ -86,45 +85,54 @@ nav {
 	
 	padding-bottom: 10px;
 	display: flex;
-	font-size:20px;
+	font-size:25px;
 
+	.selectorCripto{
+	margin-left:20px;
+
+	}
 			div:first-child {
 				padding-top:20px;
 				width: 100%;
-				
 				justify-content: flex-start;
-
-			
 			}
 			div:last-child {
 				padding-top:20px;
 				width: 100%;
 				display: flex;
-				
 				justify-content: flex-end;
 
 			}
-			
-
 }
 
 /*-----------------------------------------ESTILOS PROYECTO-----------------------------------*/
 
 section{
 
-	
 	height:60vh;
-	border: solid 1px red;
 	text-align: center;
-
 	.canvas{
-	
-		border: solid 1px red;
-	
+		border: solid 2px red;
+		margin-bottom:20px;
 	}
+
+}
+.contenedorsection{
+	padding-bottom:20px;
+	padding-top:20px;
+	font-size:25px;
+
+		.inputFecha{
+			margin-right: 20px;
+		}
+	}
+.resultado{
+
+	font-size:35px;
+	padding-bottom: 50px;
+	padding-top: 20px;
 	
 }
-
 /*-----------------------------------------ESTILOS PROYECTO-----------------------------------*/
 
 footer{

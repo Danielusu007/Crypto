@@ -5,11 +5,9 @@ const Header = () => {
 
     return (
         <>
-
             <header>
                 <h1>Cry Cripto</h1>
             </header>
-
         </>
     )
 }
