@@ -13,12 +13,12 @@ const Section = (props) => {
 
             const response = await fetch(`https://api.coingecko.com/api/v3/coins/${props.moneda.id}/${props.dia.s}`);
             const responseJSON = await response.json();
-
             setCoinsprecios((currentcoinsprecios) => {
                 return responseJSON.prices
             })
         }
         fetchApi();
+
 
     }, [props])
 
